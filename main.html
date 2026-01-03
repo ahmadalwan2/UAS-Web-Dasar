@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage nusaGO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+  rel="stylesheet" 
+  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+  crossorigin="anonymous">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+      .nav-wrapper {
+    margin: 20px 50px 0px 50px;
+
+  }
+
+    .navbar-orange {
+      background-color: #f9f9f9;
+    }
+    .navbar-orange .nav-link:hover {
+      color: #2A8918 !important;
+    }
+    .navbar-orange .navbar-brand,
+    .navbar-orange .nav-link,
+    .navbar-orange .dropdown-toggle {
+      color: #ED3F27 !important;
+      font-weight: 500 !important;
+    }
+    .dropdown-item {
+      color: #ED3F27 !important;
+    }
+    .dropdown-item:hover {
+      color: #2A8918 !important;
+    }
+    .btn-outline-success {
+      border-radius: 25px !important;
+      font-weight: 500 !important;
+      color: #ED3F27 !important;
+      border: 1px solid #ED3F27 !important;
+    }
+    .btn-outline-success:hover {
+      color: #f9f9f9 !important;
+      background-color: #ED3F27 !important;
+    }
+    .form-control {
+      border-radius: 25px !important;
+      border: 1px solid #c4c4c4 !important;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+      color: #ED3F27 !important;
+    }
+    .form-control::placeholder {
+      color: #808080 !important;
+    }
+
+    .custom-toggler {
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      
+    }
+
+    .toggler-bar {
+      width: 25px;
+      height: 3px;
+      background-color: #2A8918; 
+      border-radius: 2px;
+    }
+
+.hero-section {
+  background-image: url("img/main-png.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh !important;
+  padding-top: 150px !important;
+  position: relative;
+  
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  color: #f9f9f9;
+  max-width: 700px;
+  padding-left: 40px;
+}
+
+    .hero-section h1,
+    .hero-section p {
+    color: #f9f9f9 !important;
+    }
+
+    .hero-wrapper {
+  margin: 30px 50px; 
+  border-radius: 35px;
+  overflow: hidden; 
+}
+.hero-section .container-fluid {
+  padding-top: 160px !important;
+  padding-left: 100px !important;
+  z-index: 1;
+}
+
+.btn-wave-hero {
+  margin-top: 35px !important;
+  color: #f9f9f9;
+  text-decoration: none;
+  border: 1px solid #f9f9f9;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-family: Poppins, sans-serif;
+  cursor: pointer;
+}
+
+.btn-wave-hero:hover {
+  background-color: #d6321f !important;
+}
+
+
+    .benefit-section {
+      padding: 90px 0;
+      background-color: #fdf4e3;
+    }
+
+    .icon-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.5s ease;
+    }
+    .icon-box:hover {
+      transform: scale(1.2);
+      box-shadow: 0 8px 20px rgba(237, 70, 39, 0.15);
+    }
+
+    .bg-orange {
+      background-color: #ED3F27;
+    }
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+      /* .about-wrapper {
+      margin-bottom: 40px !important; 
+      margin-top: 100px; 
+    }
+
+
+    .about-wrapper p {
+      font-weight: 400 !important;
+    } */
+    .highlight {
+      color: #ED3F27 !important;
+    }
+    .highlight-2 {
+      color: #ED3F27;
+      font-weight: 600 !important;
+    }
+
+  .highlight-3 {
+    color: #ED3F27;
+  }
+
+  .destination-section {
+    margin: 70px;
+    background-color: #f9f9f9;
+  }
+
+
+    .services-section {
+      background-image: url("img/services-img.jpg"); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #f9f9f9;
+      padding: 100px 80px 60px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+
+    .services-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .services-section > * {
+      position: relative;
+      z-index: 2;
+    }
+      .nusago-footer {
+      background-color: #ED3F27;
+      color: #f9f9f9;
+      font-size: 16px;
+      padding: 20px 20px;
+    }
+
+    .nusago-footer p {
+      margin: 0 !important;
+    }
+    .nusago-footer a {
+      text-decoration: none;
+      color: #f9f9f9;
+      margin: 0 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .nusago-footer a:hover {
+      opacity: 0.7;
+    }
+
+    .footer {
+      color: #731111;
+    }
+
+    /* .btn-wave3 {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid #FDF4E3;
+      background-color: transparent;
+      color: #FDF4E3;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      z-index: 1;
+      display: inline-block; 
+      margin: 0 auto 0px auto;
+    }
+
+    .btn-wave3::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0; 
+      width: 0;
+      height: 0;
+      background: #ED3F27;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      transition: width 0.8s ease, height 0.8s ease;
+      z-index: 0;
+    }
+
+    .btn-wave3 span {
+      position: relative;
+      z-index: 2; 
+    }
+
+    .btn-wave3:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .btn-wave3:hover {
+      color: #FDF4E3;
+    } */
+
+ 
+    .logo-navbar {
+      max-width: 115px;
+      vertical-align: middle;
+    }
+
+.tour-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 35px;
+  font-weight: 600;
+  color: #161616;
+  margin-bottom: 10px;
+}
+.section-subheading {
+  margin-bottom: 50px;
+  font-family: Poppins, sans-serif;
+}
+
+.section-highlight {
+  color: #ED3F27;
+}
+
+.tour-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.tour-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 320px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+  color: #ED3F27;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.btn-wave-left {
+  border: 1px solid #f9f9f9;
+  background-color: #ED3F27;
+  color: #f9f9f9;
+  padding: 6px 16px;
+  font-size: 12px;
+  border-radius: 25px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Poppins, sans-serif;
+  cursor: pointer;
+}
+
+.btn-wave-left:hover {
+  background-color: #d03824;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+
+
+
+.booking-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 50px;
+  gap: 40px;
+  font-family: Poppins, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.cta-left {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.cta-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cta-text {
+  margin-top: 20px;
+}
+
+.cta-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ED3F27;
+  margin-bottom: 10px;
+}
+
+.cta-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.cta-form {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 80px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cta-form h3 {
+  text-align: center;
+  color: #ED3F27;
+  margin-bottom: 20px;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.cta-form button {
+  width: 100%;
+  padding: 10px;
+}
+
+/* .dashboard-section {
+  padding: 80px 50px;
+  background-color: #f9f9f9;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+
+.dashboard-section h2 {
+  font-size: 24px;
+  color: #ED3F27;
+  margin-bottom: 40px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.dashboard-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: scale(1.02);
+}
+
+.dashboard-card h4 {
+  color: #ED3F27;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.dashboard-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.status {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 13px;
+} */
+
+.dashboard-visual {
+  padding: 50px 60px 150px 60px;
+  background: #f9f9f9;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+
+.dashboard-visual h2 {
+  color: #161616;
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.dashboard-highlight {
+  color: #ED3F27;
+}
+
+.dashboard-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trip-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.trip-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trip-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #2A8918;
+
+  color: #fff;
+  width: 100%;
+}
+
+.trip-overlay h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.trip-overlay p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+  </style>
+
+
+<div class="nav-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-orange">
+  <div class="container-fluid">
+    <img src="img/nusago-logo.png" class="logo-navbar" alt="logo">
+<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="toggler-bar"></span>
+  <span class="toggler-bar"></span>
+  <span class="toggler-bar"></span>
+</button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#booking">Booking</a>
+        </li>
+        <a class="nav-link active" aria-current="page" href="#explore">Explore</a>
+        </li>
+        </li>
+        <a class="nav-link active" aria-current="page" href="#dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href=https://web.whatsapp.com target="_blank">Contact</a></li>
+            <li><a class="dropdown-item" href="#contact">FAQ</a></li>
+          </ul>
+
+      </ul>
+<button class="btn btn-outline-success" onclick="window.location.href='landing.html'">Logout</button>
+      </form>
+    </div>
+  </div>
+  </div>
+</nav>
+</head>
+
+<body>
+  <div class="hero-wrapper" id="home">
+  <section class="hero-section d-flex align-item-center">
+    <div class="hero-overlay"></div>
+   <div class="container-fluid text-start px-4">
+      <h1 class="display-4 fw-bold">Petualanganmu di Alam <br> Indonesia Dimulai di Sini</h1>
+      <p class="lead">Temukan tempat baru, rasakan kedamaian alam, dan bawa pulang <br> cerita dari setiap sudut nusantara.</p>
+      <a href="#booking" class="btn-wave-hero"><span>Booking</span></a>
+  </div>
+  </section>
+  </div>
+
+
+<section class="tour-section" id="explore">
+  <h2 class="section-title">Explore Indonesia, <span class="section-highlight">Your Way</span></h2>
+  <p class="section-subheading">Pilih destinasi terbaikmu dan mulai petualangan yang kamu rancang sendiri.</p>
+  <div class="tour-card-wrapper">
+
+
+    <div class="tour-card">
+      <img src="img/02.jpg" alt="Lombok Adventure">
+      <div class="card-content">
+        <h3>Lombok Adventure</h3>
+        <p>Petualangan alam dan pantai</p>
+        <span class="price">Rp 2.100.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <img src="img/03.jpg" alt="Labuan Bajo Escape">
+      <div class="card-content">
+        <h3>Labuan Bajo Escape</h3>
+        <p>Jelajahi keindahan Komodo</p>
+        <span class="price">Rp 3.200.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+
+       <div class="tour-card">
+      <img src="img/01.jpg" alt="Bali Gateway">
+      <div class="card-content">
+        <h3>Bali Gateway</h3>
+        <p>Eksplor budaya dan alam Bali</p>
+        <span class="price">Rp 2.500.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <img src="img/02.jpg" alt="Lombok Adventure">
+      <div class="card-content">
+        <h3>Lombok Adventure</h3>
+        <p>Petualangan alam dan pantai</p>
+        <span class="price">Rp 2.100.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <img src="img/03.jpg" alt="Labuan Bajo Escape">
+      <div class="card-content">
+        <h3>Labuan Bajo Escape</h3>
+        <p>Jelajahi keindahan Komodo</p>
+        <span class="price">Rp 3.200.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+       <div class="tour-card">
+      <img src="img/01.jpg" alt="Bali Gateway">
+      <div class="card-content">
+        <h3>Bali Gateway</h3>
+        <p>Eksplor budaya dan alam Bali</p>
+        <span class="price">Rp 2.500.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <img src="img/02.jpg" alt="Lombok Adventure">
+      <div class="card-content">
+        <h3>Lombok Adventure</h3>
+        <p>Petualangan alam dan pantai</p>
+        <span class="price">Rp 2.100.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+
+    <div class="tour-card">
+      <img src="img/03.jpg" alt="Labuan Bajo Escape">
+      <div class="card-content">
+        <h3>Labuan Bajo Escape</h3>
+        <p>Jelajahi keindahan Komodo</p>
+        <span class="price">Rp 3.200.000</span>
+        <a href="#" class="btn-wave-left"><span>Detail</span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="booking-cta" id="booking">
+  <div class="cta-left">
+    <img src="img/photo-1.jpg" alt="Lombok Adventure">
+    <div class="cta-text">
+      <h2>Find Your Escape in Nature</h2>
+      <p>Petualangan alam dan pantai menantimu. Booking sekarang dan <br> rasakan keindahan Indonesia bersama nusaGO.</p>
+    </div>
+  </div>
+
+  <div class="cta-form">
+    <form>
+      <h3>Pesan Perjalanan</h3>
+      <input type="text" placeholder="Tujuan (misal: Lombok)" required>
+      <select>
+        <option>Paket Keluarga</option>
+        <option>Paket Sendiri</option>
+      </select>
+      <input type="date" required>
+      <button type="submit" class="btn-wave-left"><span>Pesan Sekarang</span></button>
+    </form>
+  </div>
+</section>
+
+<section class="dashboard-visual" id="dashboard">
+  <h2>Perjalananmu Bersama <span class="dashboard-highlight">nusaGO</span></h2>
+  <div class="dashboard-gallery">
+
+    <div class="trip-card">
+      <img src="img/01.jpg" alt="Lombok Adventure">
+      <div class="trip-overlay">
+        <h3>Lombok Adventure</h3>
+        <p>Berangkat 2 hari lagi</p>
+        <a href="#" class="btn-wave-left"><span>Lihat Detail</span></a>
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <img src="img/02.jpg" alt="Bali Gateway">
+      <div class="trip-overlay">
+        <h3>Bali Gateway</h3>
+        <p>Sudah selesai</p>
+        <a href="#" class="btn-wave-left"><span>Riwayat</span></a>
+      </div>
+    </div>
+
+    <div class="trip-card">
+      <img src="img/03.jpg" alt="Labuan Bajo Escape">
+      <div class="trip-overlay">
+        <h3>Labuan Bajo Escape</h3>
+        <p>Promo 10% hingga 5 Nov</p>
+        <a href="#" class="btn-wave-left"><span>Ambil Promo</span></a>
+      </div>
+    </div>
+
+        <div class="trip-card">
+      <img src="img/03.jpg" alt="Labuan Bajo Escape">
+      <div class="trip-overlay">
+        <h3>Labuan Bajo Escape</h3>
+        <p>Promo 10% hingga 5 Nov</p>
+        <a href="#" class="btn-wave-left"><span>Ambil Promo</span></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+ 
+
+<footer class="nusago-footer text-center" id="contact">
+  <div class="container">
+    <!-- <p class="mb-2 fw-bold">nusaGO</p>
+    <p class="mb-3">Menemani setiap langkahmu menjelajahi keindahan Indonesia.</p> -->
+    <!-- <div class="footer">
+      <a href="#">FAQ</a><a href="#">Support</a>
+    </div> -->
+    <p class="copyright">© 2025 nusaGO. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+  crossorigin="anonymous"></script>
+</body>
+</html>
